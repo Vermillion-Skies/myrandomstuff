@@ -9,6 +9,7 @@ import os
 import platform
 # Import shutil to make a zip
 import shutil
+# Commenting here to make sure I have git set up right lmfao 
 
 def select_directory():
     global dir
