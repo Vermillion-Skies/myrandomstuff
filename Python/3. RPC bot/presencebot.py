@@ -16,100 +16,48 @@ def getappid():
 def statcode(x, y):
     if x == str("1"): #School status
         if y == str("d"):
-            return("Gloria is at class rn")
+            return("Empty details")
             pass
         elif y == str("s"):
-            return("She may be slow to respond, please be patient")
+            return("Empty status")
             pass
         elif y == str("i"):
-            return("schoolimg")
-            pass
-        pass
-    elif x == str("2"): #Gaming status
-        if y == str("d"):
-            return("Gloria is gaming rn")
-            pass
-        elif y == str("s"):
-            return("She may or may not be at the PC rn")
-            pass
-        elif y == str("i"):
-            return("gaming")
-            pass
-        pass
-    elif x == str("3"): #Relaxing status
-        if y == str("d"):
-            return("Gloria is doing nothing rn")
-            pass
-        elif y == str("s"):
-            return("What a lazy ass bum")
-            pass
-        elif y == str("i"):
-            return("lazybum")
-            pass
-        pass
-    elif x == str("4"): #Linux fuckery status
-        if y == str("d"):
-            return("Gloria is back on her Linux fuckery")
-            pass
-        elif y == str("s"):
-            return("Probably killing her laptop again or smth")
-            pass
-        elif y == str("i"):
-            return("hacker")
-            pass
-        pass
-    elif x == str("5"): #Programming nonsense status
-        if y == str("d"):
-            return("Gloria is programming!")
-            pass
-        elif y == str("s"):
-            return("Hopefully something practical (probably not)")
-            pass
-        elif y == str("i"):
-            return("programmer")
-            pass
-        pass
-    elif x == str("6"): #Hanging out irl status
-        if y == str("d"):
-            return("Gloria is hanging out with people IRL")
-            pass
-        elif y == str("s"):
-            return("I know, shocking right?")
-            pass
-        elif y == str("i"):
-            return("bliss")
+            return("large image asset here")
             pass
         pass
     pass
 stat = str(input("Enter status code: "))
 appidl = getappid()
 appid = appidl[0]
-RPC = Presence(appid)
-RPC.connect()
-print("Bot is starting, attempting to connect...")
-botconn = str("y")
-starttime = time.time()
-conn = str("0")
-while botconn == str("y"):
-    try:
-        RPC.update(
-            details=statcode(stat, "d"),
-            state=statcode(stat, "s"),
-            large_image=statcode(stat, "i"),
-            #large_text="text to show when hovering over large image",
-            #small_image="asset name for small image",
-            #small_text="text to show when hovering over small image",
-            start=starttime,
-        )
-        if conn == str("1"):
+if appid == str("fail"):
+    quit()
+else:
+    RPC = Presence(appid)
+    RPC.connect()
+    print("Bot is starting, attempting to connect...")
+    botconn = str("y")
+    starttime = time.time()
+    conn = str("0")
+    while botconn == str("y"):
+        try:
+            RPC.update(
+                details=statcode(stat, "d"),
+                state=statcode(stat, "s"),
+                large_image=statcode(stat, "i"),
+                #large_text="text to show when hovering over large image",
+                #small_image="asset name for small image",
+                #small_text="text to show when hovering over small image",
+                start=starttime,
+            )
+            if conn == str("1"):
+                pass
+            else:
+                print("Successfully connected!")
+                conn = str("1")
+                pass
             pass
-        else:
-            print("Successfully connected!")
-            conn = str("1")
+        except Exception as e:
+            print("An exception has occurred: " + e)
+            botconn = str("n")
             pass
-        pass
-    except Exception as e:
-        print("An exception has occurred: " + e)
-        botconn = str("n")
-        pass
-    time.sleep(15)
+        time.sleep(15)
