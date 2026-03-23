@@ -1,0 +1,2 @@
+#Ignores the pbcred.txt file in the RPC bot since that'll contain my actual app ID and I don't want to get my shit hijacked
+"Python/3. RPC bot/pbcred.txt"
