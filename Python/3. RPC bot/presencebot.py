@@ -48,11 +48,11 @@ def statcode(x, y):
             pass
         pass
     pass
+stat = str(input("Enter status code: "))
 appidl = getappid()
 appid = appidl[0]
 RPC = Presence(appid)
 RPC.connect()
-stat = str(input("Enter status code: "))
 print("Bot is starting, attempting to connect...")
 botconn = str("y")
 starttime = time.time()
