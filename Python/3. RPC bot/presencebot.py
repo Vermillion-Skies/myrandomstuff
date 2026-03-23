@@ -56,6 +56,7 @@ RPC.connect()
 print("Bot is starting, attempting to connect...")
 botconn = str("y")
 starttime = time.time()
+conn = str("0")
 while botconn == str("y"):
     try:
         RPC.update(
@@ -67,6 +68,12 @@ while botconn == str("y"):
             #small_text="text to show when hovering over small image",
             start=starttime,
         )
+        if conn == str("1"):
+            pass
+        else:
+            print("Successfully connected!")
+            conn = str("1")
+            pass
         pass
     except Exception as e:
         print("An exception has occurred: " + e)
