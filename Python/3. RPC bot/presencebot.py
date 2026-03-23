@@ -44,13 +44,14 @@ RPC.connect()
 stat = str(input("Enter status code: "))
 print("Bot is starting, attempting to connect...")
 botconn = str("y")
+starttime = time.time()
 while botconn == str("y"):
     try:
         RPC.update(
             details=statcode(stat, "d"),
             state=statcode(stat, "s"),
             large_image=statcode(stat, "i"),
-            start=time.time()
+            start=starttime,
         )
         pass
     except Exception as e:
