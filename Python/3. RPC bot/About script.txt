@@ -1,1 +1,16 @@
-This is a bot I'll be experimenting with to change my own Discord Rich Presence. Add application ID details in pbcred.txt
+This is a bot I'll be experimenting with to change my own Discord Rich Presence. Add application ID in the first line of pbcred.txt
+Out of the box, it'll come with no filled statuses, and will have to be configured by the user. a status can be configured by adding code to the statcode(x, y) function like so:
+
+if x == str("status code"):
+    if y == str("d"): (for text line 1)
+        return("Details line")
+        pass
+    elif y == str("s"): (for text line 2)
+        return("Status line")
+        pass
+    elif y == str("i"): (for large image)
+        return("Name of asset in Discord applications page")
+        pass
+    pass
+pass
+
