@@ -14,7 +14,7 @@ def getappid():
         pass
     pass
 def statcode(x, y):
-    if x == str("1"):
+    if x == str("1"): #School status
         if y == str("d"):
             return("Gloria is at class rn")
             pass
@@ -25,7 +25,7 @@ def statcode(x, y):
             return("schoolimg")
             pass
         pass
-    elif x == str("2"):
+    elif x == str("2"): #Gaming status
         if y == str("d"):
             return("Gloria is gaming rn")
             pass
@@ -34,6 +34,17 @@ def statcode(x, y):
             pass
         elif y == str("i"):
             return("gaming")
+            pass
+        pass
+    elif x == str("3"): #Relaxing status
+        if y == str("d"):
+            return("Gloria is doing nothing rn")
+            pass
+        elif y == str("s"):
+            return("What a lazy ass bum")
+            pass
+        elif y == str("i"):
+            return("lazybum")
             pass
         pass
     pass
@@ -51,6 +62,9 @@ while botconn == str("y"):
             details=statcode(stat, "d"),
             state=statcode(stat, "s"),
             large_image=statcode(stat, "i"),
+            #large_text="text to show when hovering over large image",
+            #small_image="asset name for small image",
+            #small_text="text to show when hovering over small image",
             start=starttime,
         )
         pass
