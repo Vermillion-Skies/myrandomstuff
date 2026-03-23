@@ -47,6 +47,39 @@ def statcode(x, y):
             return("lazybum")
             pass
         pass
+    elif x == str("4"): #Linux fuckery status
+        if y == str("d"):
+            return("Gloria is back on her Linux fuckery")
+            pass
+        elif y == str("s"):
+            return("Probably killing her laptop again or smth")
+            pass
+        elif y == str("i"):
+            return("hacker")
+            pass
+        pass
+    elif x == str("5"): #Programming nonsense status
+        if y == str("d"):
+            return("Gloria is programming!")
+            pass
+        elif y == str("s"):
+            return("Hopefully something practical (probably not)")
+            pass
+        elif y == str("i"):
+            return("programmer")
+            pass
+        pass
+    elif x == str("6"): #Hanging out irl status
+        if y == str("d"):
+            return("Gloria is hanging out with people IRL")
+            pass
+        elif y == str("s"):
+            return("I know, shocking right?")
+            pass
+        elif y == str("i"):
+            return("bliss")
+            pass
+        pass
     pass
 stat = str(input("Enter status code: "))
 appidl = getappid()
