@@ -25,6 +25,17 @@ def statcode(x, y):
             return("schoolimg")
             pass
         pass
+    elif x == str("2"):
+        if y == str("d"):
+            return("Gloria is gaming rn")
+            pass
+        elif y == str("s"):
+            return("She may or may not be at the PC rn")
+            pass
+        elif y == str("i"):
+            return("gaming")
+            pass
+        pass
     pass
 appidl = getappid()
 appid = appidl[0]
