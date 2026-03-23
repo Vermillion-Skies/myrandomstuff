@@ -1,0 +1,1 @@
+This is a bot I'll be experimenting with to change my own Discord Rich Presence. Add application ID details in pbcred.txt
