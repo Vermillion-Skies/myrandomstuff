@@ -27,7 +27,7 @@ select_directory()
 answer = int(input("How much cheese do you want?"))
 total = answer
 current = int(0)
-urllib.request.urlretrieve("https://raw.githubusercontent.com/BTHacks/myrandomstuff/refs/heads/main/Python/2.%20Cheese%20Image%20Downloader/cheese.jpg", dir + "cheesebase.jpg")
+urllib.request.urlretrieve("https://raw.githubusercontent.com/Vermillion-Skies/myrandomstuff/refs/heads/main/Python/2.%20Cheese%20Image%20Downloader/cheese.jpg", dir + "cheesebase.jpg")
 src = str(dir + "cheesebase.jpg")
 current = current + 1
 while current <= total:
